@@ -1,0 +1,52 @@
+constant time - O(1)
+logarithmic time - O(log(n))
+linear time - O(n)
+polynomial time - O(n^k)
+exponential time - O(2^n)
+
+
+1. Understanding merge sort
+    - What is the resulting list that will be sorted after 3 recursive calls to mergesort?
+        - 
+    - What is the resulting list that will be sorted after 16 recursive calls to mergesort?
+        - 
+    - What are the first 2 lists to be merged?
+        - 
+    - Which two lists would be merged on the 7th merge?
+        - 
+
+2. Understanding quicksort
+
+    1) The following statements are correct about the partition step: 
+      - The pivot could have been 17, but could not have been 14
+      - The pivot could have been either 14 or 17
+      - Neither 14 nor 17 could have been the pivot
+      - The pivot could have been 14, but could not have been 17
+
+      - Why?
+        - 
+
+    2) Resulting list after the second partitioning
+      - When using the last item on the list as a pivot
+        - 
+      - When using the first item on the list as a pivot
+        - 
+
+3. Implementing quicksort
+    - see function ___
+    - O(___)
+4. Implementing merge sort
+    - see function ___
+    - O(___)
+5. Sorting a linked list using merge sort
+    - see function ___
+    - O(___)
+6. Bucket sort
+    - see function ___
+    - O(___)
+7. Sort in place
+    - see function ___
+    - O(___)
+8. Sorting books
+    - see function ___
+    - O(___)
