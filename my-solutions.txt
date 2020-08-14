@@ -7,46 +7,56 @@ exponential time - O(2^n)
 
 1. Understanding merge sort
     - What is the resulting list that will be sorted after 3 recursive calls to mergesort?
-        - 
+        - [ 21 ]
     - What is the resulting list that will be sorted after 16 recursive calls to mergesort?
-        - 
+        - [ 16, 49, 39, 27, 43, 34, 46, 40 ]
     - What are the first 2 lists to be merged?
-        - 
+        - [ 21 ] & [ 1 ]
     - Which two lists would be merged on the 7th merge?
-        - 
+        - [ 1, 21, 26, 45 ]  &  [ 2, 9, 28, 29 ]
 
 2. Understanding quicksort
 
-    1) The following statements are correct about the partition step: 
-      - The pivot could have been 17, but could not have been 14
-      - The pivot could have been either 14 or 17
-      - Neither 14 nor 17 could have been the pivot
-      - The pivot could have been 14, but could not have been 17
+    1) The pivot could have been either 14 or 17
+      - This is true because for both values, the numbers to the left are <= the pivot, and the numbers to the right are >= the pivot
 
-      - Why?
-        - 
-
-    2) Resulting list after the second partitioning
+    2) Resulting list after the second partitioning of 14, 17, 13, 15, 19, 10, 3, 16, 9, 12
       - When using the last item on the list as a pivot
-        - 
+        - first partition: 
+            pivot: 12
+            10, 3, 9, 12, 17, 13, 15, 19, 16, 14
+        - second partition: 
+            pivot: 9
+            3, 9, 10, 12, 14, 17, 13, 15, 19, 16
       - When using the first item on the list as a pivot
-        - 
+        - first partition: 
+            pivot = 14
+            12, 13, 10, 3, 9, 14, 17, 15, 19, 16
+        - second partition: 
+            pivot = 12
+            9, 10, 3, 12, 13, 14, 17, 15, 19, 16
 
 3. Implementing quicksort
-    - see function ___
-    - O(___)
+    - see function quickSort()
+    - O(nlog(n))
 4. Implementing merge sort
-    - see function ___
-    - O(___)
+    - see function mergeSort
+    - O(nlog(n))
 5. Sorting a linked list using merge sort
-    - see function ___
-    - O(___)
+    - see function mergeSortList()
+    - O(nlog(n))
 6. Bucket sort
-    - see function ___
-    - O(___)
+    - see function bucketSort()
+    - O(n)
 7. Sort in place
-    - see function ___
-    - O(___)
+    - see function randomizeArray()
+    - O(n)
 8. Sorting books
-    - see function ___
-    - O(___)
+    Imagine that I gave you 20 books to sort in alphabetical order. Express this as an algorithm and then implement your algorithm.
+
+    - For my solution, I will assume that I have plenty of space to lay out the books.
+    1) First, I would mentally space out 26 book-widths or so representing buckets for each letter of the alphabet.
+    2) Next, I would look at the first letter of the first book's title. Based on this letter's location in the alphabet, I would place the book in the corresponding bucket.
+    3) I would repeat step 2 for each unsorted book. If there are multiple books beginning with the same letter, I would simply stack them.
+    4) Once all books are processed into their proper buckets, I would loop through the buckets alphabetically, adding these books to the final sorted shelf.
+    5) For any buckets that have multiple books, I would sort these quickly by finding the lowest alphabetical book in the stack and set it face-down in a sorted substack - repeating until all books in the bucket have been sorted.
